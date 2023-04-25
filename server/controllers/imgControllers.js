@@ -9,8 +9,8 @@ exports.saveImg = async (req, res, next) => {
       image: url + "/" + req.file.filename
     });
     await img.save();
-
-    res.json({ url:  url + "/" + req.file.filename });
+ console.log(img);
+    res.json(img);
   } catch (error) {
     console.log(error);
   }

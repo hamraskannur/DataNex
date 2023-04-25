@@ -23,8 +23,7 @@ function App() {
     const { data } = await axios
       .post("http://localhost:3002/upload", formData)
       .catch((err) => console.log(err));
-      console.log(data.url);
-    setImages([...images,{image: data.url }]);
+    setImages([...images,data]);
   };
 
   const handleFileChange = (e) => {
